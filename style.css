@@ -4,6 +4,7 @@
     --cinza-perola: #D9D9D6;
     --bege-areia: #CBBFAD;
     --taupe: #7A6E65;
+    --taupe-claro: #A4978E;
 }
 
 body {
@@ -85,6 +86,64 @@ body {
 section {
     padding: 80px 0;
 }
+
+/*   Section Contato */
+.contato-section {
+  padding: 60px 20px;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+.icone-maquina {
+  width: 500px;
+  margin-bottom: 0px;
+}
+
+.linha-agulha {
+  width: 80%;
+  height: 2px;
+  background: #000;
+  border: none;
+  margin: 20px auto;
+}
+
+.titulo-logo {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.scissor-icon {
+  font-size: 28px;
+  margin-left: 5px;
+}
+
+.subtitulo {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+
+/* Botão WhatsApp */
+.btn-custom {
+    background: var(--verde-oliva);
+    color: var(--offwhite);
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-custom:hover {
+    background: var(--taupe);
+    color: var(--offwhite);
+}
+
 
 /* Catalogo Virtual */
 .wrap {
@@ -177,7 +236,14 @@ p.lead {
     border: 1px solid #eee
 }
 
-@media (max-width:900px) {
+@media (max-width:980px) {
+    .navbar{
+        flex-direction: row;
+        padding: 15px;
+    }
+    .btn-custom{
+        display: none;
+    }
     .book-shell {
         padding: 16px
     }
@@ -186,3 +252,10 @@ p.lead {
         height: 200px
     }
 }
+/* rodapé */
+.copyright {
+    background:var(--bege-areia) ;
+}
+
+
+

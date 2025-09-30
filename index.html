@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>silcortinas</title>
     <!-- Bootstrap -->
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -51,8 +53,8 @@
                 Agendar Visita
             </a>
         </div>
-
     </nav>
+
     <!-- hero -->
     <section class="hero">
         <div class="hero-bg"></div>
@@ -69,6 +71,7 @@
             </a>
         </div>
     </section>
+
     <!-- SobreMim -->
     <section id="about" class="container text-center">
         <div class="row align-items-center">
@@ -82,7 +85,8 @@
 
                     Mais do que cortinas, entregamos conforto, estilo e sofisticação, criando peças que valorizam cada
                     espaço e refletem a personalidade de nossos clientes. </p>
-                <a class="btn btn-custom" href="#">
+                <!-- Botão abre modal -->
+                <a class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#aboutModal">
                     Saiba Mais
                 </a>
             </div>
@@ -91,56 +95,158 @@
             </div>
         </div>
     </section>
+
     <!-- Catalogo Virtual -->
-    
-        <div class="wrap">
-            <h1>Cortinas mais Pedidas</h1>
-            <p>
-                Navegue como um Mostruário fisico: clique ou arraste a borda da pagina
-            </p>
-            <div class="book-shell">
-                <div id="book" class="flip-book">
-                    <!-- CAPA -->
-                    <div class="page" data-density="hard">
-                        <div class="page-content">
-                            <span class="chip">
-                                Coleções de Cortinas
-                            </span>
-                            <h2>
-                                Bem vindo ao Mostruário
-                            </h2>
-                            <p>
-                                Descubra nossos tipos de tecidos e acabamentos
-                            </p>
-                            <div class="btns">
-                                <button class="btn primary" onclick="pf.flipNext()">
-                                    ver Catalogo
-                                </button>
-                                <button class="btn" onclick="pf.turnToPage(3)">
-                                    Cortinas Teatros
-                                </button>
-                            </div>
+    <div class="wrap">
+        <h1>Cortinas mais Pedidas</h1>
+        <p>
+            Navegue como um Mostruário físico: clique ou arraste a borda da página
+        </p>
+        <div class="book-shell">
+            <div id="book" class="flip-book">
+                <!-- CAPA -->
+                <div class="page" data-density="hard">
+                    <div class="page-content">
+                        <span class="chip">
+                            Coleções de Cortinas
+                        </span>
+                        <h2>
+                            Bem vindo ao Mostruário
+                        </h2>
+                        <p>
+                            Descubra nossos tipos de tecidos e acabamentos
+                        </p>
+                        <div class="btns">
+                            <button class="btn primary" onclick="pf.flipNext()">
+                                ver Catalogo
+                            </button>
+                            <button class="btn" onclick="pf.turnToPage(3)">
+                                Cortinas Teatros
+                            </button>
                         </div>
                     </div>
-                    <!-- Pagina1 -->
-                    <div class="page">
-                        <div class="page-content">
-                            <img src="" alt="">
-                            <p>
-                                Ideal para quartos
-                            </p>
-                            <span class="chip">
-                                Trilhos suiços
-                            </span>
-                        </div>
+                </div>
+                <!-- Pagina1 -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="imagem1.jpg" alt="">
+                        <p>
+                            Ideal para quartos
+                        </p>
+                        <span class="chip">
+                            Trilhos suiços
+                        </span>
+
                     </div>
-                    <!-- Pagina 1 Final -->
+
+                </div>
+                <!-- Pagina 1 Final -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sobre Mim -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="aboutModalLabel">Sobre Mim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Olá, meu nome é Silviana e sou responsável pela confecção de todas as cortinas. Trabalho ao lado
+                        do meu marido, Deusmar, e juntos estamos nesse ramo há mais de vinte anos. Ao longo dessa
+                        trajetória, buscamos sempre aprimorar nosso trabalho, com dedicação e cuidado, para oferecer
+                        qualidade, elegância e a busca constante pela perfeição em cada projeto.
+                    </p>
+                    <p>
+                        Nosso compromisso é transformar sua casa em um espaço que una conforto, harmonia e beleza em
+                        cada detalhe.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
-    
+    </div>
+
+    <!-- Contato -->
+    <div id="contato" class="contato-section">
+        <div class="container text-center">
+
+            <!-- Ícone máquina de costura (SVG ou imagem) -->
+            <div class="icon">
+                <img src="maquina-costura.png" alt="Máquina de Costura" class="icone-maquina">
+            </div>
+
+            <!-- Linha estilo agulha -->
+            <hr class="linha-agulha">
+
+            <!-- Nome estilo logo -->
+            <h2 class="titulo-logo">
+                AtelierSilcortinas
+                <span class="scissor-icon">✂</span>
+            </h2>
+
+            <p class="subtitulo">atelier & service</p>
+
+            <p class="lead mt-4">
+                Ficaremos felizes em ajudar a transformar seu lar com cortinas e persianas sob medida.
+                Trabalhamos sempre para oferecer <b>conforto, beleza e qualidade</b> em cada projeto.
+            </p>
+
+            <ul class="list-unstyled mt-4">
+                <li><b>Telefone:</b> (21) 98933-6443 </li>
+                <li><b>Instagram:</b>
+                    <a href="https://instagram.com/ateliersilcortinas" target="_blank" id="InstaText">@Silcortinas</a>
+                </li>
+                <li><b>Locais de Atendimento:</b> Rio de Janeiro - RJ</li>
+            </ul>
+
+            <a class="btn btn-custom mt-3" href="https://wa.me/message/TFBEIQQNVUP6A1" target="_blank">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </div>
+    <!-- Copyright Rodapé -->
+    <div class="copyright">
+
+        <footer class="text-center text-white">
+            <!-- Grid container -->
+            <div class="container pt-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+
+                    <!-- Instagram -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fa-brands fa-whatsapp"></i></a>
+                    <!-- Whatzaap -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fa-brands fa-whatsapp"></i></a>
+
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+    </div>
+    <!-- End of .container -->
+
+
+
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script do PageFlip: usa o bundle que expõe `PageFlip` no window -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
     <script src="script.js"></script>
 </body>
